@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RECAPTCHA_V3_SITE_KEY,RecaptchaV3Module } from 'ng-recaptcha';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -10,9 +12,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RecaptchaV3Module
   ],
-  providers: [],
+  providers: [{ provide: RECAPTCHA_V3_SITE_KEY, useValue: environment.key }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
