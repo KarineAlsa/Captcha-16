@@ -3,14 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RecaptchaModule } from 'ng-recaptcha';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent
-  ],
+   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RecaptchaModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
